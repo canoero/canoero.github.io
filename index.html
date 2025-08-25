@@ -1,404 +1,268 @@
-<!-- FINAL VERSION (V3) - PASTE THIS ENTIRE BLOCK INTO A SINGLE 'RAW HTML' ELEMENT IN SYSTEME.IO -->
+<!-- FINAL VERSION (THE 'NORMA' ADAPTATION) - PASTE THIS ENTIRE BLOCK INTO A SINGLE 'RAW HTML' ELEMENT IN SYSTEME.IO -->
 
 <style>
-    /* ========== SYSTEME.IO - DJ ELITE V3 ========== */
+    /* ========== SYSTEME.IO - THE 'NORMA' ADAPTATION ========== */
     :root {
-        --bg-dark: #0D0D12 !important;
-        --bg-card: #16161E !important;
-        --text-light: #A8A8B3 !important;
-        --text-white: #FFFFFF !important;
-        --accent-primary: #00F5A0 !important;
-        --accent-secondary: #6C3B9F !important;
-        --border-color: rgba(255, 255, 255, 0.1) !important;
-        --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
-        --gradient-main: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%) !important;
+        --background-light: #F5F5F7 !important;
+        --text-dark: #1D1D1F !important;
+        --text-light: #6E6E73 !important;
+        --accent-blue: #007AFF !important;
+        --border-color: #E5E5E7 !important;
+        --font-sans: Arial, Helvetica, sans-serif !important;
     }
 
-    .dj-v3-container, .dj-v3-container * {
+    .norma-container, .norma-container * {
         font-family: var(--font-sans) !important;
         box-sizing: border-box !important;
         -webkit-font-smoothing: antialiased !important;
         -moz-osx-font-smoothing: grayscale !important;
     }
-    .dj-v3-container {
-        background-color: var(--bg-dark) !important;
+    .norma-container {
+        background-color: var(--background-light) !important;
         color: var(--text-light) !important;
-        line-height: 1.7 !important;
+        line-height: 1.6 !important;
         padding: 0 !important;
         margin: 0 !important;
     }
-    .dj-v3-container .container { max-width: 1140px !important; margin: 0 auto !important; padding: 0 24px !important; }
-    .dj-v3-container .section { padding: 100px 0 !important; }
-    .dj-v3-container .text-center { text-align: center !important; }
+    .container {
+        max-width: 1100px !important;
+        margin: 0 auto !important;
+        padding: 0 24px !important;
+    }
+    .section {
+        padding: 100px 0 !important;
+    }
 
     /* TYPOGRAPHY */
-    .dj-v3-container h1, .dj-v3-container h2, .dj-v3-container h3, .dj-v3-container h4 { color: var(--text-white) !important; font-weight: 700 !important; line-height: 1.2 !important; }
-    .dj-v3-container .heading-xl { font-size: clamp(3rem, 7vw, 5rem) !important; margin-bottom: 1.5rem !important; }
-    .dj-v3-container .heading-lg { font-size: clamp(2.2rem, 5vw, 3.5rem) !important; margin-bottom: 2rem !important; }
-    .dj-v3-container .heading-md { font-size: 1.5rem !important; margin-bottom: 1rem !important; }
-    .dj-v3-container .p-large { font-size: 1.2rem !important; max-width: 700px !important; margin: 0 auto 2.5rem !important; }
-    .dj-v3-container .text-gradient { background: var(--gradient-main) !important; background-clip: text !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+    .norma-container h1, .norma-container h2, .norma-container h3, .norma-container h4 {
+        color: var(--text-dark) !important;
+        font-weight: bold !important;
+        line-height: 1.2 !important;
+    }
+    .heading-xl { font-size: clamp(2.5rem, 5vw, 4rem) !important; margin-bottom: 1rem !important; }
+    .heading-lg { font-size: clamp(2rem, 4vw, 3rem) !important; text-align: center !important; margin-bottom: 4rem !important; }
+    .heading-md { font-size: 1.25rem !important; margin-bottom: 0.5rem !important; }
+    .norma-container p { max-width: 600px !important; }
+    .p-large { font-size: 1.15rem !important; color: var(--text-dark) !important; margin-bottom: 2rem !important; }
 
     /* HEADER */
-    .dj-v3-container .header {
+    .header {
         padding: 20px 0 !important;
-        background: rgba(13, 13, 18, 0.8) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
         border-bottom: 1px solid var(--border-color) !important;
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        z-index: 1000 !important;
-        transition: transform 0.3s ease !important;
+        background: #fff !important;
     }
-    .dj-v3-container .nav-container { display: flex !important; justify-content: space-between !important; align-items: center !important; }
-    .dj-v3-container .nav-logo { font-size: 1.5rem !important; font-weight: bold !important; color: var(--text-white) !important; text-decoration: none !important; }
+    .nav-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    .nav-logo { font-size: 1.5rem !important; font-weight: bold !important; color: var(--text-dark) !important; text-decoration: none !important; }
 
     /* BUTTON */
-    .dj-v3-container .btn {
+    .btn {
         display: inline-block !important;
-        background: var(--gradient-main) !important;
-        color: var(--text-white) !important;
-        padding: 18px 36px !important;
-        border-radius: 50px !important;
-        font-weight: 700 !important;
-        font-size: 1.1rem !important;
+        background: var(--accent-blue) !important;
+        color: #fff !important;
+        padding: 14px 28px !important;
+        border-radius: 8px !important;
+        font-weight: bold !important;
+        font-size: 1rem !important;
         text-decoration: none !important;
         cursor: pointer !important;
         border: none !important;
-        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-        box-shadow: 0 5px 20px rgba(0, 245, 160, 0.2) !important;
+        transition: opacity 0.3s ease !important;
     }
-    .dj-v3-container .btn:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(0, 245, 160, 0.3) !important; }
+    .btn:hover { opacity: 0.8 !important; }
 
     /* HERO */
-    .dj-v3-container .hero { padding-top: 200px !important; padding-bottom: 100px !important; }
-    .dj-v3-container .hero-badge { display: inline-block !important; border: 1px solid var(--accent-primary) !important; color: var(--accent-primary) !important; padding: 8px 16px !important; border-radius: 20px !important; margin-bottom: 1.5rem !important; font-size: 0.9rem !important; }
-    .dj-v3-container .trust-badges { display: flex !important; justify-content: center !important; align-items: center !important; gap: 20px !important; margin-top: 1.5rem !important; color: var(--text-light) !important; font-size: 0.9rem !important; }
+    .hero {
+        padding: 80px 0 !important;
+    }
+    .hero-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 60px !important;
+        align-items: center !important;
+    }
+    @media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr !important; text-align: center !important; } }
+    .hero-image-wrapper { height: 400px !important; border-radius: 10px !important; overflow: hidden !important; }
+    .hero-image { width: 100% !important; height: 100% !important; object-fit: cover !important; }
 
-    /* SOCIAL PROOF LOGOS */
-    .dj-v3-container .proof-grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important; gap: 30px !important; align-items: center !important; justify-items: center !important; }
-    .dj-v3-container .proof-grid img { max-height: 25px !important; filter: grayscale(100%) brightness(5) !important; opacity: 0.7 !important; transition: all 0.3s ease !important; }
-    .dj-v3-container .proof-grid img:hover { opacity: 1 !important; filter: grayscale(0) brightness(1) !important; }
-
-    /* COMPARISON */
-    .dj-v3-container .comparison-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 30px !important; margin-top: 4rem !important; }
-    @media (max-width: 768px) { .dj-v3-container .comparison-grid { grid-template-columns: 1fr !important; } }
-    .dj-v3-container .comparison-card { background: var(--bg-card) !important; border: 1px solid var(--border-color) !important; border-radius: 15px !important; padding: 2rem !important; }
-    .dj-v3-container .comparison-card h3 { margin-bottom: 1.5rem !important; font-size: 1.2rem !important; }
-    .dj-v3-container .comparison-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
-    .dj-v3-container .comparison-list li { padding-left: 30px !important; position: relative !important; margin-bottom: 1rem !important; }
-    .dj-v3-container .problem-card li::before { content: '❌' !important; position: absolute !important; left: 0 !important; }
-    .dj-v3-container .solution-card li::before { content: '✅' !important; position: absolute !important; left: 0 !important; }
-    .dj-v3-container .problem-card { border-left: 3px solid #E53E3E !important; }
-    .dj-v3-container .solution-card { border-left: 3px solid var(--accent-primary) !important; }
+    /* SOCIAL PROOF */
+    .social-proof {
+        padding: 40px 0 !important;
+        border-top: 1px solid var(--border-color) !important;
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+    .proof-grid {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+        gap: 20px !important;
+        align-items: center !important;
+        justify-items: center !important;
+    }
+    .proof-grid img { max-height: 25px !important; filter: grayscale(100%) !important; opacity: 0.6 !important; }
+    .proof-text { text-align: center !important; margin-bottom: 2rem !important; font-weight: bold !important; color: var(--text-light) !important; }
 
     /* FEATURES */
-    .dj-v3-container .features-grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; gap: 30px !important; margin-top: 4rem !important; }
-    .dj-v3-container .feature-card { background: var(--bg-card) !important; border: 1px solid var(--border-color) !important; border-radius: 15px !important; padding: 2.5rem 2rem !important; text-align: center !important; transition: all 0.3s ease !important; }
-    .dj-v3-container .feature-card:hover { transform: translateY(-8px) !important; border-color: var(--accent-primary) !important; }
-    .dj-v3-container .feature-icon { font-size: 2.5rem !important; margin-bottom: 1rem !important; line-height: 1 !important; }
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        gap: 30px !important;
+    }
+    .feature-card { padding: 2rem !important; text-align: center !important; border: 1px solid var(--border-color) !important; border-radius: 10px !important; }
+    .feature-icon { font-size: 2.5rem !important; margin-bottom: 1rem !important; color: var(--accent-blue) !important; }
 
     /* TESTIMONIALS */
-    .dj-v3-container .testimonial-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 30px !important; max-width: 750px !important; margin: 4rem auto 0 !important; }
-    .dj-v3-container .testimonial-card { background: linear-gradient(145deg, #1a1a24, #121218) !important; border: 1px solid var(--border-color) !important; border-radius: 15px !important; padding: 2rem !important; }
-    .dj-v3-container .testimonial-author { display: flex !important; align-items: center !important; margin-top: 1.5rem !important; }
-    .dj-v3-container .author-image { width: 50px !important; height: 50px !important; border-radius: 50% !important; margin-right: 1rem !important; object-fit: cover !important; border: 2px solid var(--accent-primary) !important; }
-    .dj-v3-container .author-name { font-weight: bold !important; color: var(--text-white) !important; }
+    .testimonial-card {
+        background: #fff !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 10px !important;
+        padding: 2rem !important;
+        max-width: 700px !important;
+        margin: 0 auto !important;
+    }
+    .testimonial-author { display: flex !important; align-items: center !important; margin-top: 1.5rem !important; }
+    .author-image { width: 50px !important; height: 50px !important; border-radius: 50% !important; margin-right: 1rem !important; object-fit: cover !important; }
+    .author-name { font-weight: bold !important; color: var(--text-dark) !important; }
 
     /* PRICING */
-    .dj-v3-container .pricing-card {
-        background: var(--bg-card) !important;
-        border: 2px solid var(--accent-primary) !important;
-        border-radius: 20px !important;
-        padding: 2.5rem !important;
-        max-width: 600px !important;
-        margin: 4rem auto 0 !important;
-        box-shadow: 0 0 40px rgba(0, 245, 160, 0.2) !important;
-        position: relative !important;
-        overflow: hidden !important;
+    .pricing-card {
+        border: 2px solid var(--accent-blue) !important;
+        border-radius: 10px !important;
+        padding: 2rem !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
     }
-    .dj-v3-container .pricing-badge { position: absolute !important; top: -15px !important; left: 50% !important; transform: translateX(-50%) !important; background: var(--gradient-main) !important; color: var(--text-white) !important; padding: 8px 20px !important; border-radius: 20px !important; font-weight: 700 !important; font-size: 0.9rem !important; }
-    .dj-v3-container .price { font-size: 4.5rem !important; font-weight: 800 !important; color: var(--text-white) !important; margin: 1rem 0 !important; }
-    .dj-v3-container .price-original { font-size: 1.8rem !important; color: var(--text-light) !important; text-decoration: line-through !important; margin-left: 1rem !important; }
-    .dj-v3-container .checklist { list-style: none !important; text-align: left !important; margin: 2.5rem 0 !important; padding: 0 !important; }
-    .dj-v3-container .checklist li { padding: 10px 0 10px 35px !important; position: relative !important; }
-    .dj-v3-container .checklist li::before { content: '✓' !important; position: absolute !important; left: 0 !important; color: var(--accent-primary) !important; font-size: 1.2rem !important; font-weight: bold !important; }
-    .dj-v3-container .checklist strong { color: var(--text-white) !important; }
-
-    /* URGENCY / COUNTDOWN */
-    .dj-v3-container .urgency-box { background: rgba(0, 245, 160, 0.05) !important; border: 1px solid rgba(0, 245, 160, 0.2) !important; border-radius: 10px !important; padding: 1.5rem !important; margin: 2rem 0 !important; }
-    .dj-v3-container .countdown { display: flex !important; justify-content: center !important; gap: 15px !important; margin-top: 1rem !important; }
-    .dj-v3-container .countdown-item { background: var(--bg-dark) !important; padding: 10px !important; border-radius: 5px !important; min-width: 60px !important; }
-    .dj-v3-container .countdown-number { font-size: 1.8rem !important; font-weight: 700 !important; color: var(--text-white) !important; line-height: 1 !important; }
-    .dj-v3-container .countdown-label { font-size: 0.7rem !important; text-transform: uppercase !important; color: var(--text-light) !important; }
-
-    /* FAQ */
-    .dj-v3-container .faq-grid { max-width: 800px !important; margin: 4rem auto 0 !important; }
-    .dj-v3-container .faq-item { border-bottom: 1px solid var(--border-color) !important; padding: 1.5rem 0 !important; }
-    .dj-v3-container .faq-question { display: flex !important; justify-content: space-between !important; align-items: center !important; cursor: pointer !important; font-size: 1.2rem !important; font-weight: 600 !important; color: var(--text-white) !important; }
-    .dj-v3-container .faq-icon { font-size: 1.5rem !important; transition: transform 0.3s ease !important; }
-    .dj-v3-container .faq-answer { max-height: 0 !important; overflow: hidden !important; transition: max-height 0.5s ease, padding-top 0.5s ease !important; }
-    .dj-v3-container .faq-item.active .faq-answer { padding-top: 1rem !important; }
-    .dj-v3-container .faq-item.active .faq-icon { transform: rotate(45deg) !important; }
+    .price { font-size: 3.5rem !important; font-weight: bold !important; color: var(--text-dark) !important; margin: 1rem 0 !important; }
+    .checklist { list-style: none !important; text-align: left !important; margin: 2rem 0 !important; padding: 0 !important; }
+    .checklist li { padding: 8px 0 8px 30px !important; position: relative !important; }
+    .checklist li::before { content: '✓' !important; position: absolute !important; left: 0 !important; color: var(--accent-blue) !important; }
 
     /* FOOTER */
-    .dj-v3-container .footer { background: #000 !important; padding: 60px 0 !important; border-top: 1px solid var(--border-color) !important; text-align: center !important; }
-    .dj-v3-container .footer p { margin-bottom: 1rem !important; }
+    .footer { background: #fff !important; padding: 40px 0 !important; border-top: 1px solid var(--border-color) !important; text-align: center !important; }
 
     /* ANIMATIONS */
-    .dj-v3-container .anim-fade-up {
+    .anim-fade-up {
         opacity: 0 !important;
-        transform: translateY(30px) !important;
-        transition: opacity 0.8s ease, transform 0.8s ease !important;
+        transform: translateY(20px) !important;
+        transition: opacity 0.6s ease, transform 0.6s ease !important;
     }
-    .dj-v3-container .anim-fade-up.visible {
+    .anim-fade-up.visible {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
+
 </style>
 
-<div class="dj-v3-container">
+<div class="norma-container">
 
     <header class="header">
         <div class="container nav-container">
             <a href="#" class="nav-logo">DJ Elite</a>
-            <a href="#pricing" class="btn">Get The Toolkit</a>
+            <a href="#pricing" class="btn">Get Access</a>
         </div>
     </header>
 
-    <main>
-        <section class="hero text-center">
-            <div class="container">
-                <div class="anim-fade-up">
-                    <div class="hero-badge">Join 1,200+ Professional DJs Worldwide</div>
-                    <h1 class="heading-xl">Book More <span class="text-gradient">Gigs</span>.<br>Get Paid Like a <span class="text-gradient">Pro</span>.</h1>
-                    <p class="p-large">The exclusive toolkit that transforms amateur DJs into highly-paid professionals. Get the guide, press kit, scripts & community access you need to succeed.</p>
-                    <a href="#pricing" class="btn">🚀 Get Instant Access - Only $47</a>
-                    <div class="trust-badges">
-                        <span>✓ 30-Day Guarantee</span>
-                        <span>✓ Lifetime Access</span>
-                        <span>✓ Secure Payment</span>
-                    </div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content anim-fade-up">
+                    <h1 class="heading-xl">The Professional DJ's Toolkit</h1>
+                    <p class="p-large">A complete system of tools, templates, and guides designed to help you book more gigs, command higher rates, and manage your career like a professional.</p>
+                    <a href="#pricing" class="btn">Get Instant Access</a>
+                </div>
+                <div class="hero-image-wrapper anim-fade-up">
+                    <img src="https://images.unsplash.com/photo-1619994828909-c61333d84457?q=80&w=1974&auto=format&fit=crop" alt="Professional DJ setup" class="hero-image">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="social-proof" style="padding: 40px 0 !important;">
-            <div class="container anim-fade-up">
-                <p class="text-center" style="margin-bottom: 2rem !important; font-weight: bold !important; color: var(--text-light) !important;">TRUSTED BY DJS FEATURED IN</p>
-                <div class="proof-grid">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Mixmag_logo.svg/1280px-Mixmag_logo.svg.png" alt="Mixmag Logo" loading="lazy">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/DJ_Mag_logo.svg/1280px-DJ_Mag_logo.svg.png" alt="DJ Mag Logo" loading="lazy">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Resident_Advisor_logo.svg/1280px-Resident_Advisor_logo.svg.png" alt="Resident Advisor Logo" loading="lazy">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Beatport_logo.svg/1280px-Beatport_logo.svg.png" alt="Beatport Logo" loading="lazy">
-                </div>
+    <section class="social-proof">
+        <div class="container">
+            <p class="proof-text">TRUSTED BY DJS FEATURED IN</p>
+            <div class="proof-grid">
+                <!-- Replace with real logos if possible -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Mixmag_logo.svg/1280px-Mixmag_logo.svg.png" alt="Mixmag Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/DJ_Mag_logo.svg/1280px-DJ_Mag_logo.svg.png" alt="DJ Mag Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Resident_Advisor_logo.svg/1280px-Resident_Advisor_logo.svg.png" alt="Resident Advisor Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Beatport_logo.svg/1280px-Beatport_logo.svg.png" alt="Beatport Logo">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section">
-            <div class="container text-center">
-                <div class="anim-fade-up">
-                    <h2 class="heading-lg">Stop Guessing. Start <span class="text-gradient">Booking</span>.</h2>
-                    <p class="p-large">Are you stuck in a loop of free gigs and ignored emails? See the difference.</p>
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="heading-lg">Everything You Need to Succeed</h2>
+            <div class="features-grid">
+                <div class="feature-card anim-fade-up">
+                    <div class="feature-icon">📋</div>
+                    <h3 class="heading-md">Pro Press Kit</h3>
+                    <p>A professionally designed press kit template that makes a stunning first impression.</p>
                 </div>
-                <div class="comparison-grid">
-                    <div class="comparison-card problem-card anim-fade-up">
-                        <h3 style="color: #E53E3E !important;">Without The Toolkit</h3>
-                        <ul class="comparison-list">
-                            <li>Promoters ignore your emails</li>
-                            <li>Playing for free or pocket change</li>
-                            <li>No professional materials or credibility</li>
-                            <li>Stuck playing small, amateur events</li>
-                            <li>Career stagnating for months or years</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-card solution-card anim-fade-up">
-                        <h3 style="color: var(--accent-primary) !important;">With The Toolkit</h3>
-                        <ul class="comparison-list">
-                            <li>Get professional replies from promoters</li>
-                            <li>Confidently command $300-$800+ per gig</li>
-                            <li>Impress with a stunning press kit</li>
-                            <li>Access premium venue & festival networks</li>
-                            <li>Achieve consistent career growth</li>
-                        </ul>
-                    </div>
+                <div class="feature-card anim-fade-up">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="heading-md">Outreach Scripts</h3>
+                    <p>Battle-tested email and message scripts that get replies from promoters and venues.</p>
+                </div>
+                <div class="feature-card anim-fade-up">
+                    <div class="feature-icon">💼</div>
+                    <h3 class="heading-md">Booking Management</h3>
+                    <p>Simple tools and guides for managing your bookings, contracts, and invoices like a pro.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="features" class="section">
-            <div class="container text-center">
-                <div class="anim-fade-up">
-                    <h2 class="heading-lg">Everything You Need to <span class="text-gradient">Succeed</span></h2>
-                    <p class="p-large">A complete, field-tested system for professionalizing your DJ career.</p>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card anim-fade-up">
-                        <div class="feature-icon">📋</div>
-                        <h3 class="heading-md">Pro Press Kit Templates</h3>
-                        <p>Make a stunning first impression with professionally designed press kit templates (Canva, Photoshop, Word).</p>
-                    </div>
-                    <div class="feature-card anim-fade-up">
-                        <div class="feature-icon">💬</div>
-                        <h3 class="heading-md">Proven Outreach Scripts</h3>
-                        <p>50+ battle-tested email and message scripts that get replies from promoters, bookers, and venues.</p>
-                    </div>
-                    <div class="feature-card anim-fade-up">
-                        <div class="feature-icon">💼</div>
-                        <h3 class="heading-md">Booking Management System</h3>
-                        <p>Simple tools and guides for managing your bookings, contracts, and invoices like a seasoned professional.</p>
+    <section id="testimonials" class="section" style="background: #fff !important;">
+        <div class="container">
+            <h2 class="heading-lg">Trusted by Working DJs</h2>
+            <div class="testimonial-card anim-fade-up">
+                <p class="p-large" style="font-style: italic !important;">"The press kit and email scripts are worth the price alone. I went from struggling to get replies to being booked solid for two months straight. This is the most practical investment I've made in my career."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop" alt="Testimonial author" class="author-image">
+                    <div>
+                        <p class="author-name">Jenna Miles</p>
+                        <p>Club Resident, NYC</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="testimonials" class="section" style="background: #000 !important;">
-            <div class="container text-center">
-                <div class="anim-fade-up">
-                    <h2 class="heading-lg">Real Results from <span class="text-gradient">DJs Like You</span></h2>
-                </div>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card anim-fade-up">
-                        <p class="p-large" style="font-style: italic !important;">"The press kit and email scripts are worth the price alone. I went from struggling to get replies to being booked solid for two months straight. This is the most practical investment I've made in my career."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop" alt="Testimonial author" class="author-image" loading="lazy">
-                            <div>
-                                <p class="author-name">Jenna Miles</p>
-                                <p>Club Resident, NYC</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="testimonial-card anim-fade-up">
-                        <p class="p-large" style="font-style: italic !important;">"My rate went from $150 to $600 per night. The press kit template and scripts are pure gold. I'm now the go-to DJ for 3 major venues in Miami."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop" alt="Testimonial author" class="author-image" loading="lazy">
-                            <div>
-                                <p class="author-name">Sofia Rodriguez</p>
-                                <p>Private Event DJ, Miami</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="pricing-card anim-fade-up">
+                <h2 style="text-align: center !important;">Get the Toolkit</h2>
+                <p style="text-align: center !important;">One-time payment. Lifetime access.</p>
+                <div class="price">$47</div>
+                <ul class="checklist">
+                    <li>Professional Press Kit Template</li>
+                    <li>50+ Outreach Scripts</li>
+                    <li>Booking & Invoice Templates</li>
+                    <li>Lifetime Updates</li>
+                </ul>
+                <a href="#" class="btn" style="width: 100% !important;">Get Instant Access</a>
             </div>
-        </section>
-
-        <section id="pricing" class="section">
-            <div class="container text-center">
-                <div class="pricing-card anim-fade-up">
-                    <div class="pricing-badge">🔥 Limited Time Offer</div>
-                    <h2 style="margin-top: 2rem !important;">Get The Complete Toolkit</h2>
-                    <p>One-time payment. Lifetime access. 84% Savings.</p>
-                    <div style="margin: 2rem 0 !important;">
-                        <span class="price">$47</span>
-                        <span class="price-original">$297</span>
-                    </div>
-                    <ul class="checklist">
-                        <li><strong>Professional Press Kit Template</strong> (Value: $97)</li>
-                        <li><strong>50+ Proven Outreach Scripts</strong> (Value: $67)</li>
-                        <li><strong>Booking & Invoice Templates</strong> (Value: $47)</li>
-                        <li><strong>Bonus:</strong> Elite DJ Community Access (Value: $97)</li>
-                        <li><strong>Bonus:</strong> Technical Rider Guide (Value: $27)</li>
-                        <li><strong>Lifetime Updates</strong> (Priceless)</li>
-                    </ul>
-                    <div class="urgency-box">
-                        <p style="font-size: 1.1rem !important; font-weight: 700 !important; color: var(--text-white) !important; margin-bottom: 0.5rem !important;">Special pricing ends soon!</p>
-                        <div class="countdown">
-                            <div class="countdown-item"><div class="countdown-number" id="days">00</div><div class="countdown-label">Days</div></div>
-                            <div class="countdown-item"><div class="countdown-number" id="hours">00</div><div class="countdown-label">Hours</div></div>
-                            <div class="countdown-item"><div class="countdown-number" id="minutes">00</div><div class="countdown-label">Min</div></div>
-                            <div class="countdown-item"><div class="countdown-number" id="seconds">00</div><div class="countdown-label">Sec</div></div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn" style="width: 100% !important; font-size: 1.3rem !important; padding: 20px !important;">Get Instant Access & All Bonuses</a>
-                    <p style="margin-top: 1.5rem !important; font-size: 0.9rem !important;">🔒 100% Secure Payment • 💰 30-Day Money-Back Guarantee</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="section">
-            <div class="container">
-                <div class="text-center anim-fade-up">
-                    <h2 class="heading-lg">Frequently Asked <span class="text-gradient">Questions</span></h2>
-                </div>
-                <div class="faq-grid">
-                    <div class="faq-item anim-fade-up">
-                        <div class="faq-question"><span>Does this work for beginner DJs?</span><span class="faq-icon">+</span></div>
-                        <div class="faq-answer"><p>Absolutely! The pack is specifically designed for DJs who want to professionalize their career, regardless of current skill level. Our step-by-step approach works for complete beginners to intermediate DJs looking to break into the professional scene.</p></div>
-                    </div>
-                    <div class="faq-item anim-fade-up">
-                        <div class="faq-question"><span>What if it doesn't work for me?</span><span class="faq-icon">+</span></div>
-                        <div class="faq-answer"><p>You have a full 30 days to try everything. If you don't book a single gig or feel you haven't received immense value, just email us and we'll send you a full refund. No questions asked.</p></div>
-                    </div>
-                    <div class="faq-item anim-fade-up">
-                        <div class="faq-question"><span>Is this a one-time payment?</span><span class="faq-icon">+</span></div>
-                        <div class="faq-answer"><p>Yes! You pay once and get lifetime access to all the current materials and any future updates we add to the toolkit. No subscriptions, no hidden fees.</p></div>
-                    </div>
-                    <div class="faq-item anim-fade-up">
-                        <div class="faq-question"><span>What makes the Elite Community special?</span><span class="faq-icon">+</span></div>
-                        <div class="faq-answer"><p>It's our secret weapon. You'll network with successful DJs, get first access to exclusive gig opportunities, participate in collaborations, and receive ongoing support. Many members land their biggest gigs through community connections.</p></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
-            <p style="font-size: 1.5rem !important; font-weight: 700 !important; color: var(--text-white) !important;">DJ Elite</p>
-            <p>The Professional DJ's Toolkit.</p>
-            <p style="font-size: 0.9rem !important; color: var(--text-light) !important;">&copy; 2025 DJ Elite. All Rights Reserved.</p>
+            <p style="font-weight: bold !important; color: var(--text-dark) !important;">DJ Elite</p>
+            <p>&copy; 2025 DJ Elite. All Rights Reserved.</p>
         </div>
     </footer>
 
 </div>
 
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "DJ Elite Toolkit",
-    "description": "A complete system of tools, templates, and guides designed to help DJs book more gigs, command higher rates, and manage their career like a professional.",
-    "image": "https://images.unsplash.com/photo-1619994828909-c61333d84457?q=80&w=1974&auto=format&fit=crop",
-    "offers": {
-        "@type": "Offer",
-        "price": "47",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": "2025-12-31",
-        "url": "#pricing"
-    },
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "1200"
-    },
-    "brand": {
-        "@type": "Brand",
-        "name": "DJ Elite"
-    }
-}
-</script>
-
 <script>
-function initDjV3() {
-    // SMOOTH SCROLL
-    document.querySelectorAll('.dj-v3-container a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
+    function initNormaAnimations() {
+        const animatedElements = document.querySelectorAll('.norma-container .anim-fade-up');
+        if (animatedElements.length === 0) return;
 
-    // ANIMATIONS
-    const animatedElements = document.querySelectorAll('.dj-v3-container .anim-fade-up');
-    if (animatedElements.length > 0) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -407,71 +271,10 @@ function initDjV3() {
                 }
             });
         }, { threshold: 0.1 });
-        animatedElements.forEach(elem => observer.observe(elem));
-    }
 
-    // FAQ TOGGLE
-    const faqItems = document.querySelectorAll('.dj-v3-container .faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            faqItems.forEach(i => {
-                i.classList.remove('active');
-                i.querySelector('.faq-answer').style.maxHeight = '0px';
-            });
-            if (!isActive) {
-                item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            }
+        animatedElements.forEach(elem => {
+            observer.observe(elem);
         });
-    });
-
-    // COUNTDOWN TIMER
-    const countdownEndDate = new Date(new Date().getTime() + (2 * 24 * 60 * 60 * 1000) + (1 * 60 * 60 * 1000)); // 2 days + 1 hour from now
-
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = countdownEndDate - now;
-
-        if (distance < 0) {
-            document.getElementById('days').innerText = '00';
-            document.getElementById('hours').innerText = '00';
-            document.getElementById('minutes').innerText = '00';
-            document.getElementById('seconds').innerText = '00';
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        const daysEl = document.getElementById('days');
-        const hoursEl = document.getElementById('hours');
-        const minutesEl = document.getElementById('minutes');
-        const secondsEl = document.getElementById('seconds');
-
-        if(daysEl) daysEl.innerText = String(days).padStart(2, '0');
-        if(hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
-        if(minutesEl) minutesEl.innerText = String(minutes).padStart(2, '0');
-        if(secondsEl) secondsEl.innerText = String(seconds).padStart(2, '0');
     }
-
-    if (document.getElementById('countdown-timer')) {
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    }
-    
-    // Run countdown if elements exist
-    if (document.getElementById('days')) {
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    }
-}
-
-// Using a timeout to ensure systeme.io has finished its own rendering
-setTimeout(initDjV3, 300);
+    setTimeout(initNormaAnimations, 500);
 </script>
-
